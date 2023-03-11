@@ -1,0 +1,42 @@
+{
+	"schemaVersion": 1,
+	"id": "huntcraft",
+	"version": "${version}",
+	"name": "Huntcraft",
+	"description": "The main twist and tweaks for the Huntcraft SMP",
+	"authors": [
+		"LuciusofLegend"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/huntcraft/icon.png",
+	"environment": "server",
+	"entrypoints": {
+		"main": [
+			"net.lucius.huntcraft.Huntcraft"
+		],
+		"fabric-datagen": [
+			"net.lucius.huntcraft.HuntcraftDataGenerator"
+		]
+	},
+	"mixins": [
+		"huntcraft.mixins.json",
+		{
+			"config": "huntcraft.mixins.json",
+			"environment": "server"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.14.17",
+		"minecraft": "~1.19.3",
+		"java": ">=17",
+		"fabric-api": "*",
+		"polymer": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
