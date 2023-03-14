@@ -1,6 +1,8 @@
 package net.lucius.huntcraft.item;
 
 import eu.pb4.polymer.core.api.item.SimplePolymerItem;
+import eu.pb4.polymer.resourcepack.api.PolymerModelData;
+import eu.pb4.polymer.resourcepack.api.PolymerResourcePackUtils;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.lucius.huntcraft.Huntcraft;
@@ -39,7 +41,8 @@ public class ModItems {
         ItemGroupEvents.modifyEntriesEvent(group).register(entries -> entries.add(item));
     }
 
-    private static void registerModItems() {
+    public static void registerModItems() {
         Huntcraft.LOGGER.info("Registering Items for " + Huntcraft.MODID);
+        addItemsToGroup();
     }
 }
