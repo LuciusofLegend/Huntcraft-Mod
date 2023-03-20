@@ -5,17 +5,17 @@ import eu.pb4.polymer.resourcepack.api.PolymerModelData;
 import eu.pb4.polymer.resourcepack.api.PolymerResourcePackUtils;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.util.Identifier;
 import org.jetbrains.annotations.Nullable;
 
-public class RuneItem implements PolymerItem {
+public class HuntcraftItem extends Item implements PolymerItem {
 
     private final PolymerModelData model;
 
-    public RuneItem(String namespace, String path) {
-        this.model = PolymerResourcePackUtils.requestModel(Items.ECHO_SHARD, new Identifier(namespace, path));
+    public HuntcraftItem(Settings settings, Item polymerItem, String path) {
+        super(settings);
+        this.model = PolymerResourcePackUtils.requestModel(polymerItem, new Identifier("huntcraft", path));
     }
 
     @Override
