@@ -22,8 +22,8 @@ public class ModItems {
             new HuntcraftItem(new FabricItemSettings(), Items.ECHO_SHARD, "item/fire_rune"));
     public static final HuntcraftItem WATER_RUNE = registerItem("water_rune",
             new HuntcraftItem(new FabricItemSettings(), Items.ECHO_SHARD, "item/water_rune"));
-    public static final HuntcraftItem RUNE_MANAGER = registerItem("rune_manager",
-            new HuntcraftItem(new FabricItemSettings(), Items.HEART_OF_THE_SEA, "item/rune_manager"));
+    public static final HuntcraftItem RUNE_BAG = registerItem("rune_bag",
+            new HuntcraftItem(new FabricItemSettings(), Items.HEART_OF_THE_SEA, "item/rune_bag"));
 
     public static HuntcraftItem registerItem(String name, HuntcraftItem item) {
       return Registry.register(Registries.ITEM, new Identifier(Huntcraft.MODID, name), item);
@@ -34,7 +34,7 @@ public class ModItems {
         addToItemGroup(ItemGroups.COMBAT, EARTH_RUNE);
         addToItemGroup(ItemGroups.COMBAT, FIRE_RUNE);
         addToItemGroup(ItemGroups.COMBAT, WATER_RUNE);
-        addToItemGroup(ItemGroups.COMBAT, RUNE_MANAGER);
+        addToItemGroup(ItemGroups.COMBAT, RUNE_BAG);
     }
 
     private static void addToItemGroup(ItemGroup group, Item item) {
