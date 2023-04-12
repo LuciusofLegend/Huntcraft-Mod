@@ -3,6 +3,7 @@ package net.lucius.huntcraft.item;
 import eu.pb4.polymer.core.api.item.PolymerItem;
 import eu.pb4.polymer.resourcepack.api.PolymerModelData;
 import eu.pb4.polymer.resourcepack.api.PolymerResourcePackUtils;
+import net.lucius.huntcraft.Huntcraft;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.network.ServerPlayerEntity;
@@ -15,7 +16,7 @@ public class HuntcraftItem extends Item implements PolymerItem {
 
     public HuntcraftItem(Settings settings, Item polymerItem, String path) {
         super(settings);
-        this.model = PolymerResourcePackUtils.requestModel(polymerItem, new Identifier("huntcraft", path));
+        this.model = PolymerResourcePackUtils.requestModel(polymerItem, new Identifier(Huntcraft.MODID, path));
     }
 
     @Override
