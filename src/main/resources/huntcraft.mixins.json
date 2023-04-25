@@ -3,7 +3,7 @@
 	"package": "net.lucius.huntcraft.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"server": [
-		"PotionBlacklist"
+		"PotionWhitelistMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
