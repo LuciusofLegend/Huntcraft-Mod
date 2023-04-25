@@ -4,12 +4,13 @@ import net.minecraft.item.Items;
 import net.minecraft.potion.Potions;
 import net.minecraft.recipe.BrewingRecipeRegistry;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Overwrite;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Mixin(BrewingRecipeRegistry.class)
 public class PotionWhitelistMixin {
-    @Redirect(method = "registerDefaults", at = @At(value = "INVOKE", target = "Lnet/minecraft/recipe/BrewingRecipeRegistry"))
+    @Overwrite
     private static void registerDefaults() {
         BrewingRecipeRegistry.registerPotionType(Items.POTION);
         BrewingRecipeRegistry.registerPotionType(Items.SPLASH_POTION);
