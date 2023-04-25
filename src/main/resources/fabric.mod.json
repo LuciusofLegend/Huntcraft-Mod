@@ -30,11 +30,11 @@
 	],
 	"depends": {
 		"fabricloader": ">=0.14.17",
-		"minecraft": "~1.19.3",
+		"minecraft": "~1.19.4",
 		"java": ">=17",
 		"fabric-api": "*"
 	},
 	"suggests": {
-		"another-mod": "*"
+		"villager_config": "*"
 	}
 }
