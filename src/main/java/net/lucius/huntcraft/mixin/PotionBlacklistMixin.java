@@ -9,8 +9,8 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Mixin(BrewingRecipeRegistry.class)
 public class PotionBlacklistMixin {
-    @Redirect(method = "readTags",
-            at = @At(value = "INVOKE_ASSIGN", target = "Lnet/minecraft/recipe/BrewingRecipeRegistry;"))
+    @Redirect(method = "registerDefaults",
+            at = @At(value = "INVOKE", target = "Lnet/minecraft/recipe/BrewingRecipeRegistry"))
     private static void registerDefaults() {
         BrewingRecipeRegistry.registerPotionType(Items.POTION);
         BrewingRecipeRegistry.registerPotionType(Items.SPLASH_POTION);
