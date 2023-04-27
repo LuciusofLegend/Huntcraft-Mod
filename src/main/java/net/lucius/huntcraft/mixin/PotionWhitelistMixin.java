@@ -9,7 +9,7 @@ import org.spongepowered.asm.mixin.Overwrite;
 @Mixin(BrewingRecipeRegistry.class)
 public class PotionWhitelistMixin {
     @Overwrite
-    private static void registerDefaults() {
+    public static void registerDefaults() {
         BrewingRecipeRegistry.registerPotionType(Items.POTION);
         BrewingRecipeRegistry.registerPotionType(Items.SPLASH_POTION);
         BrewingRecipeRegistry.registerPotionType(Items.LINGERING_POTION);
