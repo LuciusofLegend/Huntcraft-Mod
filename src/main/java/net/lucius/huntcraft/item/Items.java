@@ -17,18 +17,18 @@ public class Items {
     }
 
     public static final HuntcraftItem AIR_RUNE = registerItem("air_rune",
-            new HuntcraftItem(new FabricItemSettings(), net.minecraft.item.Items.ECHO_SHARD, "item/air_rune"));
+            new HuntcraftItem(new FabricItemSettings(), net.minecraft.item.Items.FEATHER, "item/air_rune"));
     public static final HuntcraftItem EARTH_RUNE = registerItem("earth_rune",
-            new HuntcraftItem(new FabricItemSettings(), net.minecraft.item.Items.ECHO_SHARD, "item/earth_rune"));
+            new HuntcraftItem(new FabricItemSettings(), net.minecraft.item.Items.DIAMOND, "item/earth_rune"));
     public static final HuntcraftItem FIRE_RUNE = registerItem("fire_rune",
-            new HuntcraftItem(new FabricItemSettings(), net.minecraft.item.Items.ECHO_SHARD, "item/fire_rune"));
+            new HuntcraftItem(new FabricItemSettings(), net.minecraft.item.Items.BLAZE_POWDER, "item/fire_rune"));
     public static final HuntcraftItem WATER_RUNE = registerItem("water_rune",
-            new HuntcraftItem(new FabricItemSettings(), net.minecraft.item.Items.ECHO_SHARD, "item/water_rune"));
+            new HuntcraftItem(new FabricItemSettings(), net.minecraft.item.Items.HEART_OF_THE_SEA, "item/water_rune"));
 
     public static final HuntcraftItem RUNIC_WAND = registerItem("runic_wand",
-            new HuntcraftItem(new FabricItemSettings(), net.minecraft.item.Items.HEART_OF_THE_SEA, "item/runic_wand"));
+            new HuntcraftItem(new FabricItemSettings(), net.minecraft.item.Items.BLAZE_ROD, "item/runic_wand"));
     public static final HuntcraftItem SOUL_BAG = registerItem("soul_bag",
-            new HuntcraftItem(new FabricItemSettings(), net.minecraft.item.Items.HEART_OF_THE_SEA, "item/soul_bag"));
+            new HuntcraftItem(new FabricItemSettings(), net.minecraft.item.Items.NAUTILUS_SHELL, "item/soul_bag"));
 
     private static void addToItemGroup(ItemGroup group, Item item) {
         ItemGroupEvents.modifyEntriesEvent(group).register(entries -> entries.add(item));
