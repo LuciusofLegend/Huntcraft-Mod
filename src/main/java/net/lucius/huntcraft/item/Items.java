@@ -25,8 +25,8 @@ public class Items {
     public static final HuntcraftItem WATER_RUNE = registerItem("water_rune",
             new HuntcraftItem(new FabricItemSettings(), net.minecraft.item.Items.ECHO_SHARD, "item/water_rune"));
 
-    public static final HuntcraftItem RUNE_BAG = registerItem("rune_bag",
-            new HuntcraftItem(new FabricItemSettings(), net.minecraft.item.Items.HEART_OF_THE_SEA, "item/rune_bag"));
+    public static final HuntcraftItem RUNIC_WAND = registerItem("runic_wand",
+            new HuntcraftItem(new FabricItemSettings(), net.minecraft.item.Items.HEART_OF_THE_SEA, "item/runic_wand"));
     public static final HuntcraftItem SOUL_BAG = registerItem("soul_bag",
             new HuntcraftItem(new FabricItemSettings(), net.minecraft.item.Items.HEART_OF_THE_SEA, "item/soul_bag"));
 
@@ -39,7 +39,7 @@ public class Items {
         addToItemGroup(ItemGroups.COMBAT, EARTH_RUNE);
         addToItemGroup(ItemGroups.COMBAT, FIRE_RUNE);
         addToItemGroup(ItemGroups.COMBAT, WATER_RUNE);
-        addToItemGroup(ItemGroups.COMBAT, RUNE_BAG);
+        addToItemGroup(ItemGroups.COMBAT, RUNIC_WAND);
         addToItemGroup(ItemGroups.COMBAT, SOUL_BAG);
     }
 
