@@ -33,7 +33,7 @@
 		"minecraft": "1.19.4",
 		"java": ">=17",
 		"fabric-api": "*",
-		"fabric-carpet": "*"
+		"carpet": "*"
 	},
 	"suggests": {
 		"villager_config": "*"
