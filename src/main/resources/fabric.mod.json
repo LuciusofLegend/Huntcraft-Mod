@@ -16,10 +16,8 @@
 	"environment": "server",
 	"entrypoints": {
 		"main": [
-			"net.lucius.huntcraft.Huntcraft"
-		],
-		"fabric-datagen": [
-			"net.lucius.huntcraft.HuntcraftDataGenerator"
+			"net.lucius.huntcraft.Huntcraft",
+			"net.blumbo.armortweaks.ArmorTweaks"
 		]
 	},
 	"mixins": [

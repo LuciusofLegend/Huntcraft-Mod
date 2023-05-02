@@ -3,7 +3,12 @@
 	"package": "net.lucius.huntcraft.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"server": [
-		"PotionWhitelistMixin"
+		"PotionWhitelistMixin",
+		"EnderPearlEntityMixin",
+		"ExplosionMixin",
+		"LivingEntityMixin",
+		"MinecraftServerMixin",
+		"RespawnAnchorMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
