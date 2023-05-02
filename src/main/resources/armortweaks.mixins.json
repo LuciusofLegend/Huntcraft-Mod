@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "package": "net.blumbo.armortweaks.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "server": [
+    "EnderPearlEntityMixin",
+    "ExplosionMixin",
+    "LivingEntityMixin",
+    "MinecraftServerMixin",
+    "RespawnAnchorMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
