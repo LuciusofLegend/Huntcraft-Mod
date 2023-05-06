@@ -10,7 +10,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
-public class Items {
+public class HuntcraftItems {
 
     public static HuntcraftItem registerItem(String name, HuntcraftItem item) {
       return Registry.register(Registries.ITEM, new Identifier(Huntcraft.MODID, name), item);
@@ -26,9 +26,11 @@ public class Items {
             new HuntcraftItem(new FabricItemSettings(), net.minecraft.item.Items.HEART_OF_THE_SEA, "item/water_rune"));
 
     public static final HuntcraftItem RUNIC_WAND = registerItem("runic_wand",
-            new RunicWandItem(new FabricItemSettings(), net.minecraft.item.Items.BLAZE_ROD, "item/runic_wand"));
+            new TotemOfLifeItem(new FabricItemSettings(), net.minecraft.item.Items.BLAZE_ROD, "item/runic_wand"));
     public static final HuntcraftItem SOUL_BAG = registerItem("soul_bag",
             new HuntcraftItem(new FabricItemSettings(), net.minecraft.item.Items.NAUTILUS_SHELL, "item/soul_bag"));
+    public static final HuntcraftItem TOTEM_OF_LIFE = registerItem("totem_of_life",
+            new HuntcraftItem(new FabricItemSettings(), net.minecraft.item.Items.TOTEM_OF_UNDYING, "item/totem_of_life"));
 
     private static void addToItemGroup(ItemGroup group, Item item) {
         ItemGroupEvents.modifyEntriesEvent(group).register(entries -> entries.add(item));
@@ -41,8 +43,8 @@ public class Items {
         addToItemGroup(ItemGroups.COMBAT, WATER_RUNE);
         addToItemGroup(ItemGroups.COMBAT, RUNIC_WAND);
         addToItemGroup(ItemGroups.COMBAT, SOUL_BAG);
+        addToItemGroup(ItemGroups.COMBAT, TOTEM_OF_LIFE);
     }
-
 
 
     public static void registerModItems() {
