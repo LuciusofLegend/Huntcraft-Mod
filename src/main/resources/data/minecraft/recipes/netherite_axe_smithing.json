@@ -1,10 +1,10 @@
 {
   "type": "minecraft:smithing",
   "addition": {
-    "item": "minecraft:air"
+    "item": "minecraft:barrier"
   },
   "base": {
-    "item": "minecraft:air"
+    "item": "minecraft:barrier"
   },
   "result": {
     "item": "minecraft:barrier"
