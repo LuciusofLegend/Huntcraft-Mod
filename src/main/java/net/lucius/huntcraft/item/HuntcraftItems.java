@@ -26,7 +26,7 @@ public class HuntcraftItems {
             new HuntcraftItem(new FabricItemSettings(), net.minecraft.item.Items.HEART_OF_THE_SEA, "item/water_rune"));
 
     public static final HuntcraftItem RUNIC_WAND = registerItem("runic_wand",
-            new TotemOfLifeItem(new FabricItemSettings(), net.minecraft.item.Items.BLAZE_ROD, "item/runic_wand"));
+            new HuntcraftItem(new FabricItemSettings(), net.minecraft.item.Items.BLAZE_ROD, "item/runic_wand"));
     public static final HuntcraftItem SOUL_BAG = registerItem("soul_bag",
             new HuntcraftItem(new FabricItemSettings(), net.minecraft.item.Items.NAUTILUS_SHELL, "item/soul_bag"));
     public static final HuntcraftItem TOTEM_OF_LIFE = registerItem("totem_of_life",
