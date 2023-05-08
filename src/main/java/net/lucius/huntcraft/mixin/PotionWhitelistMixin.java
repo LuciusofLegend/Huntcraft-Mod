@@ -8,6 +8,10 @@ import org.spongepowered.asm.mixin.Overwrite;
 
 @Mixin(BrewingRecipeRegistry.class)
 public class PotionWhitelistMixin {
+    /**
+     * @author LuciusofLegend
+     * @reason Remove certain potions from the registry
+     */
     @Overwrite
     public static void registerDefaults() {
         BrewingRecipeRegistry.registerPotionType(Items.POTION);

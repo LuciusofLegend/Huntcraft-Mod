@@ -2,14 +2,10 @@ package net.lucius.huntcraft.mixin;
 
 
 import net.lucius.huntcraft.item.HuntcraftItems;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.Inventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.MinecraftServer;
-import net.minecraft.server.PlayerManager;
-import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.server.network.ServerPlayerEntity;
-import org.apache.logging.log4j.core.jmx.Server;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -41,7 +37,7 @@ public class TotemOfLifeMixin {
             }
             // set max health to 26
         }
-    };
+    }
 
     private static boolean hasTotem(ServerPlayerEntity player) {
         Inventory inv = player.getInventory();
@@ -55,9 +51,6 @@ public class TotemOfLifeMixin {
             }
         }
 
-        if (totemstack == null) {
-            return true;
-        }
-        return false;
+        return totemstack == null;
     }
 }
