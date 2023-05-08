@@ -42,7 +42,7 @@ public class HuntcraftItems {
         addToItemGroup(ItemGroups.COMBAT, FIRE_RUNE);
         addToItemGroup(ItemGroups.COMBAT, WATER_RUNE);
         addToItemGroup(ItemGroups.COMBAT, RUNIC_WAND);
-        addToItemGroup(ItemGroups.COMBAT, SOUL_BAG);
+        addToItemGroup(ItemGroups.FUNCTIONAL, SOUL_BAG);
         addToItemGroup(ItemGroups.COMBAT, TOTEM_OF_LIFE);
     }
 
