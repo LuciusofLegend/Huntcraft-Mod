@@ -3,7 +3,7 @@ package net.lucius.huntcraft;
 import eu.pb4.polymer.resourcepack.api.PolymerResourcePackUtils;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
-import net.lucius.huntcraft.command.PrintServerPathCommand;
+import net.lucius.huntcraft.command.PrintWorldPathCommand;
 import net.lucius.huntcraft.item.HuntcraftItems;
 
 public class Huntcraft implements ModInitializer {
@@ -17,6 +17,6 @@ public class Huntcraft implements ModInitializer {
 	}
 
 	private static void registerCommands() {
-		CommandRegistrationCallback.EVENT.register(((dispatcher, registryAccess, environment) -> PrintServerPathCommand.register(dispatcher)));
+		CommandRegistrationCallback.EVENT.register(((dispatcher, registryAccess, environment) -> PrintWorldPathCommand.register(dispatcher)));
 	}
 }
