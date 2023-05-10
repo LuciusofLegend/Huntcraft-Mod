@@ -19,11 +19,11 @@ public class PrintWorldPathCommand {
 
     private static int run(CommandContext<ServerCommandSource> context) {
         String root = new File("").getAbsolutePath();
-
         String levelName = new ServerPropertiesLoader(Path.of(root)).getPropertiesHandler().levelName;
-        final Text text = Text.literal(root + File.separator + levelName);
 
-        context.getSource().sendFeedback(text, true);
+        final Text path = Text.literal(root + File.separator + levelName + File.separator + "scripts");
+
+        context.getSource().sendFeedback(path, true);
         return 1;
     }
 }

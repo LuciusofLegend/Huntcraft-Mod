@@ -12,6 +12,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import java.util.List;
+import java.util.Map;
 import java.util.function.BooleanSupplier;
 
 import static com.google.common.collect.Iterables.size;
@@ -26,20 +27,11 @@ public class TotemOfLifeMixin {
     public void tick(BooleanSupplier shouldKeepTicking, CallbackInfo ci) {
         for(int i = 0; i < size(players); i++) {
             ServerPlayerEntity player = players.get(i);
-            if(!hasTotem(player)) {
-                if(player.getMaxHealth() == 20) {
-                    return;
-                }
-                // set max health to 20
-            }
-            if(player.getMaxHealth() != 20) {
-                return;
-            }
-            // set max health to 26
+            hasTotem(player);
         }
     }
 
-    private static boolean hasTotem(ServerPlayerEntity player) {
+    private static void hasTotem(ServerPlayerEntity player) {
         Inventory inv = player.getInventory();
 
         ItemStack totemstack = null;
@@ -50,7 +42,8 @@ public class TotemOfLifeMixin {
                 break;
             }
         }
+        if(totemstack != null) {
 
-        return totemstack == null;
+        }
     }
 }
