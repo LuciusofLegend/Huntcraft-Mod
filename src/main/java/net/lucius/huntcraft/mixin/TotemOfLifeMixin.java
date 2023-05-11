@@ -2,17 +2,22 @@ package net.lucius.huntcraft.mixin;
 
 
 import net.lucius.huntcraft.item.HuntcraftItems;
+import net.minecraft.entity.attribute.EntityAttributeInstance;
+import net.minecraft.entity.attribute.EntityAttributeModifier;
+import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.inventory.Inventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.MinecraftServer;
+import net.minecraft.server.PlayerManager;
 import net.minecraft.server.network.ServerPlayerEntity;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import java.util.List;
-import java.util.Map;
+import java.util.UUID;
 import java.util.function.BooleanSupplier;
 
 import static com.google.common.collect.Iterables.size;
@@ -20,18 +25,23 @@ import static com.google.common.collect.Iterables.size;
 @Mixin(MinecraftServer.class)
 public class TotemOfLifeMixin {
 
-    MinecraftServer server = (MinecraftServer) (Object) this;
-    List<ServerPlayerEntity> players = server.getPlayerManager().getPlayerList();
+    @Shadow
+    private PlayerManager playerManager;
+
+    private static final UUID TOTEM_HEALTH_BOOST_ID = UUID.fromString("033fe710-eff0-11ed-a05b-0242ac120003");
+
 
     @Inject(method = "tick", at = @At("TAIL"))
     public void tick(BooleanSupplier shouldKeepTicking, CallbackInfo ci) {
+        List<ServerPlayerEntity> players = playerManager.getPlayerList();
+
         for(int i = 0; i < size(players); i++) {
             ServerPlayerEntity player = players.get(i);
             hasTotem(player);
         }
     }
 
-    private static void hasTotem(ServerPlayerEntity player) {
+    private void hasTotem(ServerPlayerEntity player) {
         Inventory inv = player.getInventory();
 
         ItemStack totemstack = null;
@@ -43,7 +53,15 @@ public class TotemOfLifeMixin {
             }
         }
         if(totemstack != null) {
-
+            applyTotemEffect(player);
         }
+    }
+    public void applyTotemEffect(ServerPlayerEntity player) {
+        EntityAttributeInstance entityAttributeInstance = player.getAttributeInstance(EntityAttributes.GENERIC_MAX_HEALTH);
+        if (entityAttributeInstance == null) {
+            return;
+        }
+        entityAttributeInstance.removeModifier(TOTEM_HEALTH_BOOST_ID);
+        entityAttributeInstance.addTemporaryModifier(new EntityAttributeModifier(TOTEM_HEALTH_BOOST_ID, "Soul speed boost", 6, EntityAttributeModifier.Operation.ADDITION));
     }
 }
