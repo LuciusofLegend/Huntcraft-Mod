@@ -19,6 +19,11 @@ public class HuntcraftItem extends Item implements PolymerItem {
         this.model = PolymerResourcePackUtils.requestModel(polymerItem, new Identifier(Huntcraft.MODID, path));
     }
 
+    public HuntcraftItem(Settings settings, Item polymerItem, String namespace, String path) {
+        super(settings);
+        this.model = PolymerResourcePackUtils.requestModel(polymerItem, new Identifier(namespace, path));
+    }
+
     @Override
     public Item getPolymerItem(ItemStack itemStack, @Nullable ServerPlayerEntity player) {
         return this.model.item();

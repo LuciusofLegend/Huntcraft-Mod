@@ -30,7 +30,7 @@ public class HuntcraftItems {
     public static final HuntcraftItem SOUL_BAG = registerItem("soul_bag",
             new HuntcraftItem(new FabricItemSettings(), net.minecraft.item.Items.NAUTILUS_SHELL, "item/soul_bag"));
     public static final HuntcraftItem TOTEM_OF_LIFE = registerItem("totem_of_life",
-            new HuntcraftItem(new FabricItemSettings(), net.minecraft.item.Items.TOTEM_OF_UNDYING, "item/totem_of_life"));
+            new HuntcraftItem(new FabricItemSettings(), net.minecraft.item.Items.TOTEM_OF_UNDYING, "minecraft", "item/totem_of_undying"));
 
     private static void addToItemGroup(ItemGroup group, Item item) {
         ItemGroupEvents.modifyEntriesEvent(group).register(entries -> entries.add(item));
