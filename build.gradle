@@ -14,6 +14,11 @@ group = project.maven_group
 repositories {
     maven {url 'https://maven.nucleoid.xyz'}
     maven {url 'https://masa.dy.fi/maven'}
+    maven {url 'https://jitpack.io'}
+    maven {url "https://maven.terraformersmc.com/"}
+    maven {url "https://maven.shedaniel.me/"}
+    maven {url "https://maven.siphalor.de/"}
+    maven {url "https://maven.isxander.dev/releases"}
 }
 
 loom {
@@ -50,11 +55,11 @@ sourceSets {
     }
 }
 dependencies {
-	minecraft "com.mojang:minecraft:${project.minecraft_version}"
-	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
-	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
+    modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
-	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
     modImplementation include("eu.pb4:polymer-core:${project.polymer_version}")
     modImplementation include("eu.pb4:polymer-blocks:${project.polymer_version}")
@@ -63,6 +68,7 @@ dependencies {
 
     modImplementation "carpet:fabric-carpet:${project.minecraft_version}-${project.carpet_core_version}"
 
+    modImplementation("com.github.Lortseam.completeconfig:base:2.3.1")
 }
 
 processResources {
