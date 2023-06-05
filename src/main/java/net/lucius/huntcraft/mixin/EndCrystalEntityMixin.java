@@ -6,7 +6,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyArg;
 
 @Mixin(EndCrystalEntity.class)
-public class EndCrystalTweaksMixin{
+public class EndCrystalEntityMixin {
 
     @ModifyArg(
             method = "damage",
