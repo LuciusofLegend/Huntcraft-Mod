@@ -14,6 +14,6 @@ public class EndCrystalEntityMixin {
             index = 6
     )
     private float modifyCrystalExplosionPower(float power) {
-        return power - 3f;
+        return power - 2.4f;
     }
 }
