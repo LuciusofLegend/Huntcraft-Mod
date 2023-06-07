@@ -36,7 +36,7 @@ public class TotemOfLifeMixin {
 
         for(int i = 0; i < size(players); i++) {
             ServerPlayerEntity player = players.get(i);
-            updateTotemEffect(player);
+            checkTotemEffect(player);
         }
     }
 
@@ -52,7 +52,7 @@ public class TotemOfLifeMixin {
         return false;
     }
 
-    public void updateTotemEffect(ServerPlayerEntity player) {
+    public void checkTotemEffect(ServerPlayerEntity player) {
         boolean hasTotem = hasTotem(player);
         EntityAttributeInstance maxHealthAttribute = player.getAttributeInstance(EntityAttributes.GENERIC_MAX_HEALTH);
         EntityAttributeModifier modifier = new EntityAttributeModifier(TOTEM_HEALTH_BOOST_ID, "Totem health boost", 6, EntityAttributeModifier.Operation.ADDITION);

@@ -16,7 +16,7 @@ public class EndCrystalItemMixin {
     public void addCrystalCooldown(ItemUsageContext context, CallbackInfoReturnable<ActionResult> cir) {
         final PlayerEntity user = context.getPlayer();
         assert user != null;
-        user.getItemCooldownManager().set(context.getStack().getItem(), 15);
+        user.getItemCooldownManager().set(context.getStack().getItem(), 15); // Cooldown time should be config variable
     }
 }
 
