@@ -1,5 +1,6 @@
 package net.lucius.huntcraft.mixin;
 
+import net.lucius.huntcraft.tweaks.Tweaks;
 import net.minecraft.entity.decoration.EndCrystalEntity;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -14,6 +15,6 @@ public class EndCrystalEntityMixin {
             index = 6
     )
     private float modifyCrystalExplosionPower(float power) {
-        return power - 2.4f; // Should be config variable
+        return power - Tweaks.endCrystalExplosionReductionAmount;
     }
 }

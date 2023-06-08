@@ -2,6 +2,7 @@ package net.lucius.huntcraft.mixin;
 
 
 import net.lucius.huntcraft.item.HuntcraftItems;
+import net.lucius.huntcraft.tweaks.Tweaks;
 import net.minecraft.entity.attribute.EntityAttributeInstance;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
@@ -55,7 +56,7 @@ public class TotemOfLifeMixin {
     public void checkTotemEffect(ServerPlayerEntity player) {
         boolean hasTotem = hasTotem(player);
         EntityAttributeInstance maxHealthAttribute = player.getAttributeInstance(EntityAttributes.GENERIC_MAX_HEALTH);
-        EntityAttributeModifier modifier = new EntityAttributeModifier(TOTEM_HEALTH_BOOST_ID, "Totem health boost", 6, EntityAttributeModifier.Operation.ADDITION);
+        EntityAttributeModifier modifier = new EntityAttributeModifier(TOTEM_HEALTH_BOOST_ID, "Totem health boost", Tweaks.totemOfLifeHealthBoostAmount, EntityAttributeModifier.Operation.ADDITION);
 
         if(hasTotem) {
             assert maxHealthAttribute != null;

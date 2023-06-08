@@ -1,5 +1,6 @@
 package net.lucius.huntcraft.mixin;
 
+import net.lucius.huntcraft.tweaks.Tweaks;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.EndCrystalItem;
 import net.minecraft.item.ItemUsageContext;
@@ -16,7 +17,7 @@ public class EndCrystalItemMixin {
     public void addCrystalCooldown(ItemUsageContext context, CallbackInfoReturnable<ActionResult> cir) {
         final PlayerEntity user = context.getPlayer();
         assert user != null;
-        user.getItemCooldownManager().set(context.getStack().getItem(), 15); // Cooldown time should be config variable
+        user.getItemCooldownManager().set(context.getStack().getItem(), Tweaks.endCrystalCooldownTime);
     }
 }
 
