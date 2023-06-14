@@ -15,17 +15,12 @@
 	"environment": "server",
 	"entrypoints": {
 		"main": [
-			"net.lucius.huntcraft.Huntcraft",
-			"net.blumbo.armortweaks.ArmorTweaks"
+			"net.lucius.huntcraft.Huntcraft"
 		]
 	},
 	"mixins": [
 		{
 			"config": "huntcraft.mixins.json",
-			"environment": "server"
-		},
-		{
-			"config": "armortweaks.mixins.json",
 			"environment": "server"
 		}
 	],
@@ -35,7 +30,8 @@
 		"java": ">=17",
 		"fabric-api": "*",
 		"carpet": "*",
-		"villagerconfig": "*"
+		"villagerconfig": "*",
+		"armortweaks": "*"
 	},
 	"suggests": {
 

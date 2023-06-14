@@ -11,10 +11,5 @@ public class Huntcraft implements ModInitializer {
 	public void onInitialize() {
 		PolymerResourcePackUtils.addModAssets("huntcraft");
 		HuntcraftItems.registerModItems();
-		registerCommands();
-	}
-
-	private static void registerCommands() {
-
 	}
 }

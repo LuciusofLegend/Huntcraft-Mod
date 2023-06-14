@@ -1,6 +1,5 @@
 package net.lucius.huntcraft.item;
 
-import eu.pb4.polymer.resourcepack.api.PolymerModelData;
 import eu.pb4.polymer.resourcepack.api.PolymerResourcePackUtils;
 import net.lucius.huntcraft.Huntcraft;
 import net.minecraft.entity.player.PlayerEntity;
