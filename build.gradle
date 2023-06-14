@@ -65,8 +65,7 @@ dependencies {
     modImplementation include("eu.pb4:polymer-blocks:${project.polymer_version}")
     modImplementation include("eu.pb4:polymer-resource-pack:${project.polymer_version}")
     modImplementation include("eu.pb4:polymer-networking:${project.polymer_version}")
-
-    modImplementation "carpet:fabric-carpet:${project.minecraft_version}-${project.carpet_core_version}"
+    modImplementation include("eu.pb4:sgui:1.2.1+1.19.3")
 
     modImplementation("com.github.Lortseam.completeconfig:base:2.3.1")
 }
